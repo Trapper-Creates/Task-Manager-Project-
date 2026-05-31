@@ -15,9 +15,14 @@ public class App {
             String Task = Input.nextLine();
             // Check if the user wants to remove a task
             if(Task.equalsIgnoreCase("remove")){
+                if (tasks.isEmpty()) {
+                    System.out.println("No tasks to remove.");
+                    continue; // Skip the rest of the loop and wait for the next input
+                }
 
                 System.out.println("What task would you like to remove?");
                 String removedTask = Input.nextLine();
+                
                 // Check if the task exists before trying to remove it to avoid errors
                 if(tasks.contains(removedTask)){
                 // If the task exists, remove it and inform the user

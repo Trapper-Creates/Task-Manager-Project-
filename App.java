@@ -67,6 +67,8 @@ public class App {
                     //}
                     
                 }
-            }       }
+            }       } catch (Exception e) {
+            System.out.println("Something went wrong: " + e.getMessage());
+            }
 }
 }
